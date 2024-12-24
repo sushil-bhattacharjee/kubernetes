@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: sushil97249/flask-app:v2
+        image: sushil97249/flask-app:v3wLB
         ports:
         - containerPort: 9000
         env:
