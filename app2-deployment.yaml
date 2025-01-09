@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+      - name: app2
+        image: sushil97249/app2:v1 # Correct image reference
+        ports:
+        - containerPort: 9500
+        env:
+        - name: FLASK_ENV # Match the environment variable expected by your app
+          value: "development"
